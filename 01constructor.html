@@ -1,0 +1,35 @@
+<body>
+    <h2 id="tittle">Classes: the basics</h2>
+
+    <script type="text/javascript">
+        /* 
+        Instance Properties: what they are
+        Instance Methods: what they do
+        */
+        class Rectangle {
+            constructor (_width, _height, _color) {
+                // setup the object
+                console.log("The rectangle is being created!");
+                this.width = _width;
+                this.height = _height;
+                this.color = _color;
+            }
+            
+            getArea () {
+                return this.width * this.height;
+            }
+
+            printDescription () {
+                console.log('I am a rectangle of  '+ this.width +' x ' + this.height + ' and I am ' + this.color);
+                //updated with the format
+            }
+
+        }
+
+        let myRectangle1 = new Rectangle(5, 3, "blue");
+        let myRectangle2 = new Rectangle(10, 5, "red");
+
+        myRectangle2.printDescription ();
+    
+    </script>
+</body>

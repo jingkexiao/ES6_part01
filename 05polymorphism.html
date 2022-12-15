@@ -1,0 +1,35 @@
+<tittle>Classes: Polymorphism</tittle>
+<!-- <link rel="stylesheet" href="http://youtube.local/assets/dcode.css">
+<link rel="shortcut icon" href="http://youtube.local/assets/favicon.ico"> -->
+
+<body>
+    <h2 id="tittle">Classes: Polymorphism</h2>
+    <script type="text/javascript">
+        class Animal {
+            constructor (name) {
+                this.name = name;
+            }
+
+            makeSound () {
+                console.log(`Generic Animal Sound!`);
+            }
+        }
+
+        class Dog extends Animal {
+            constructor (name) {
+                super(name);
+            }
+
+            makeSound () {
+                super.makeSound(); // calls parents' message of generic animal sound
+                console.log(`Woof!`);
+            }
+        }
+
+        const a1 = new Animal("Dom");
+        a1.makeSound();
+
+        const a2 = new Dog("Jeff");
+        a2.makeSound();
+
+    </script>
